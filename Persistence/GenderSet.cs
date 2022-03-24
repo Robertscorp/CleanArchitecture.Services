@@ -5,19 +5,18 @@ using System.Linq.Expressions;
 namespace CleanArchitecture.StaticEntity.Persistence
 {
 
-    public class GenderSet : IQueryable<Gender>
+    internal class GenderSet : IQueryable<Gender>
     {
 
         #region - - - - - - Fields - - - - - -
 
-        private static Dictionary<int, Gender> s_Genders = (new[]
-        {
-            new Gender("Male") { ID = 1 },
-            new Gender("Female") { ID = 2 },
-            new Gender("Mayonnaise") { ID = 3 },
-        }).ToDictionary(g => g.ID);
+        public static readonly Gender Male = new("Male") { ID = 1 };
+        public static readonly Gender Female = new("Female") { ID = 2 };
+        public static readonly Gender Mayonnaise = new("Mayonnaise") { ID = 3 };
 
-        private IQueryable<Gender> m_Genders = s_Genders.Values.AsQueryable();
+        private static readonly Dictionary<int, Gender> s_Genders = (new[] { Male, Female, Mayonnaise }).ToDictionary(g => g.ID);
+
+        private readonly IQueryable<Gender> m_Genders = s_Genders.Values.AsQueryable();
 
         #endregion Fields
 
@@ -38,6 +37,9 @@ namespace CleanArchitecture.StaticEntity.Persistence
 
         IEnumerator IEnumerable.GetEnumerator()
             => ((IEnumerable)this.m_Genders).GetEnumerator();
+
+        public static Gender GetGender(int id)
+            => s_Genders[id];
 
         #endregion Methods
 
