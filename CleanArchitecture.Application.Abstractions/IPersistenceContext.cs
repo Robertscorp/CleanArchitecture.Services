@@ -1,4 +1,6 @@
-﻿namespace CleanArchitecture.Services.Sample.Persistence
+﻿using System.Linq;
+
+namespace CleanArchitecture.Application.Abstractions
 {
 
     public interface IPersistenceContext

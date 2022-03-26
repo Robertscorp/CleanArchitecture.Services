@@ -1,4 +1,5 @@
-﻿using CleanArchitecture.Services.Sample.Entities;
+﻿using CleanArchitecture.Application.Abstractions;
+using CleanArchitecture.Services.Sample.Entities;
 using CleanArchitecture.Services.Sample.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;

@@ -1,4 +1,5 @@
-﻿using CleanArchitecture.Services.Sample.Entities;
+﻿using CleanArchitecture.Application.Abstractions;
+using CleanArchitecture.Services.Sample.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitecture.Services.Sample.Persistence
