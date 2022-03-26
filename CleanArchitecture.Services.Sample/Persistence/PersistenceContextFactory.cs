@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace CleanArchitecture.StaticEntity.Persistence
+namespace CleanArchitecture.Services.Sample.Persistence
 {
 
     internal class PersistenceContextFactory : IDesignTimeDbContextFactory<PersistenceContext>
@@ -11,7 +11,7 @@ namespace CleanArchitecture.StaticEntity.Persistence
 
         public PersistenceContext CreateDbContext(string[] args)
             => new(new DbContextOptionsBuilder<PersistenceContext>()
-                        .UseSqlite("Data Source=blog.db")
+                        .UseSqlite()
                         .Options);
 
         #endregion Methods

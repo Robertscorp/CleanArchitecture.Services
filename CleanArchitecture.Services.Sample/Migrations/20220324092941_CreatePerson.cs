@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace CleanArchitecture.StaticEntity.Migrations
+namespace CleanArchitecture.Services.Sample.Migrations
 {
 
     public partial class CreatePerson : Migration

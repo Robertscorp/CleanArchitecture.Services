@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.StaticEntity.Entities
+﻿namespace CleanArchitecture.Services.Sample.Entities
 {
 
     public class Person

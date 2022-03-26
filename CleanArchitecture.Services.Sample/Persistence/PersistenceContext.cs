@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.StaticEntity.Entities;
+﻿using CleanArchitecture.Services.Sample.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.StaticEntity.Persistence
+namespace CleanArchitecture.Services.Sample.Persistence
 {
 
     public class PersistenceContext : DbContext, IPersistenceContext

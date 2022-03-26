@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.StaticEntity.Entities;
+﻿using CleanArchitecture.Services.Sample.Entities;
 using System.Collections;
 using System.Linq.Expressions;
 
-namespace CleanArchitecture.StaticEntity.Persistence
+namespace CleanArchitecture.Services.Sample.Persistence
 {
 
     internal class GenderSet : IQueryable<Gender>

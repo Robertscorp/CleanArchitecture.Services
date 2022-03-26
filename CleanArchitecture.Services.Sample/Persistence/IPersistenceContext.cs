@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.StaticEntity.Persistence
+﻿namespace CleanArchitecture.Services.Sample.Persistence
 {
 
     public interface IPersistenceContext
